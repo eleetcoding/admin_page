@@ -13,11 +13,10 @@ userController.login = (req, res, next) => {
       });
     }
   });
-  return next();
 };
 
-userController.signup = (req, res, next) => {
-  User.create({ username: req.body.username, password: req.body.password });
+userController.signup = async (req, res, next) => {
+  await User.create({ username: req.body.username, password: req.body.password });
   return next();
 };
 

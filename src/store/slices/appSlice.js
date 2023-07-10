@@ -4,14 +4,19 @@ export const appSlice = createSlice({
   name: 'appSlice',
   initialState: {
     loggedIn: false,
+    incorrect: '',
   },
+
   reducers: {
     setLoggedIn: (state, action) => {
-      state.myState = action.payload;
+      state.loggedIn = action.payload;
+    },
+    setIncorrect: (state, action) => {
+      state.incorrect = action.payload;
     },
   },
 });
 
-export const { setLoggedIn } = appSlice.actions;
+export const { setLoggedIn, setIncorrect } = appSlice.actions;
 
 export default appSlice.reducer;

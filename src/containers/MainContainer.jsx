@@ -1,9 +1,5 @@
-import React from "react";
+import React from 'react';
 
-export default function main(){
-  return (
-    <div>
-      MAIN
-    </div>
-  )
+export default function main() {
+  return <div>ADD Schedule</div>;
 }
