@@ -3,8 +3,15 @@ const express = require('express');
 const app = express();
 const cookieParser = require('cookie-parser');
 const myRouter = require('./routes/myRoute');
+const mongoose = require('mongoose');
 
 const PORT = process.env.PORT || 3000;
+
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  dbName: 'eLeetAdmin',
+});
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
