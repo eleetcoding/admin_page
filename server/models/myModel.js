@@ -2,9 +2,15 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const testSchema = new Schema({
-  myString: { type: String, required: true, unique: true, default: 'My String' },
-  myNumber: Number,
+const userSchema = new Schema({
+  username: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
 });
 
-module.exports = mongoose.model('test', testSchema);
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  dbName: 'admin',
+});
+
+module.exports = mongoose.model('user', userSchema);

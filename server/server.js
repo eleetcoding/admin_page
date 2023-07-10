@@ -1,19 +1,10 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const myRouter = require('./routes/myRoute');
 
 const PORT = process.env.PORT || 3000;
-/* UNCOMMENT THE FOLLOWING AFTER YOU INPUT A URI */
-
-// const mongoURI = '';
-// mongoose.connect(mongoURI, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   dbName: 'myDatabase',
-// });
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
