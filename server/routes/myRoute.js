@@ -1,9 +1,13 @@
 const express = require('express');
 const myRouter = express.Router();
-const myController = require('../controllers/myController');
+const userController = require('../controllers/userController');
 
-myRouter.use('/', myController.test, (req, res) => {
-  res.status(200).send('Hello world!');
+myRouter.post('/login', userController.login, (req, res) => {
+  res.statusStatus(200);
+});
+
+myRouter.post('/signup', userController.signup, (req, res) => {
+  res.statusStatus(200);
 });
 
 module.exports = myRouter;
