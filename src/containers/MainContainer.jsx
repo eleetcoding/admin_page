@@ -67,6 +67,7 @@ export default function main() {
       </div>
       <div>
         <h1>Current Sessions</h1>
+        <p>Requires refresh and re-login to see added session</p>
         {sessionDisplay}
       </div>
     </div>

@@ -19,7 +19,6 @@ sessionController.addSession = async (req, res, next) => {
 
 sessionController.getSessions = async (req, res, next) => {
   const now = Date.now();
-  console.log(now);
   res.locals.sessions = await Session.find({ date: { $gte: now } });
   return next();
 };

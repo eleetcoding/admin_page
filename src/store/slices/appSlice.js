@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const appSlice = createSlice({
   name: 'appSlice',
   initialState: {
-    loggedIn: true,
+    loggedIn: false,
     incorrect: '',
     sessions: [],
   },
