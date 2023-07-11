@@ -9,7 +9,7 @@ sessionController.addSession = async (req, res, next) => {
       title: req.body.title,
       instructor: req.body.instructor,
       date: date,
-      url: res.body.url,
+      url: req.body.url,
       description: req.body.description,
     });
     return next();
