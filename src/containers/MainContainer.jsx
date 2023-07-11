@@ -35,8 +35,8 @@ export default function main() {
   for (let i = 0; i < sessions.length; i++) {
     sessionDisplay.push(
       <div className={styles.currSess}>
-        <h1>{sessions[i].title}</h1>
-        <h2>{sessions[i].instructor}</h2>
+        <h2>{sessions[i].title}</h2>
+        <h3>{sessions[i].instructor}</h3>
         <p>{new Date(sessions[i].date).toString()}</p>
         <p>{sessions[i].description}</p>
       </div>
