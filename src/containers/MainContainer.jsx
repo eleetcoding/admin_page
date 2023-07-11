@@ -19,7 +19,8 @@ export default function main() {
         title: e.currentTarget.elements[0].value,
         instructor: e.currentTarget.elements[1].value,
         date: new Date(e.currentTarget.elements[2].value).getTime(),
-        description: e.currentTarget.elements[3].value,
+        url: e.currentTarget.elements[3].value,
+        description: e.currentTarget.elements[4].value,
       }),
     });
   }
@@ -38,6 +39,7 @@ export default function main() {
         <h2>{sessions[i].title}</h2>
         <h3>{sessions[i].instructor}</h3>
         <p>{new Date(sessions[i].date).toString()}</p>
+        <p>{sessions[i].url}</p>
         <p>{sessions[i].description}</p>
       </div>
     );
@@ -57,6 +59,9 @@ export default function main() {
           <br />
           <label className={styles.formLabel}>Date and Time:</label>
           <input type='datetime-local' />
+          <br />
+          <label className={styles.formLabel}>Google Meets URL:</label>
+          <input type='text' />
           <br />
           <label className={styles.formLabel}>Description:</label>
           <br />
