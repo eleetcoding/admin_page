@@ -4,13 +4,17 @@ const sessionController = {};
 
 sessionController.addSession = async (req, res, next) => {
   const date = new Date(req.body.date).getTime();
-  await Session.create({
-    title: req.body.title,
-    instructor: req.body.instructor,
-    date: date,
-    description: req.body.description,
-  });
-  return next();
+  try {
+    await Session.create({
+      title: req.body.title,
+      instructor: req.body.instructor,
+      date: date,
+      description: req.body.description,
+    });
+    return next();
+  } catch {
+    return next('missing required');
+  }
 };
 
 sessionController.getSessions = async (req, res, next) => {

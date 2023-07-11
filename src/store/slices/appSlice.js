@@ -3,8 +3,9 @@ import { createSlice } from '@reduxjs/toolkit';
 export const appSlice = createSlice({
   name: 'appSlice',
   initialState: {
-    loggedIn: false,
+    loggedIn: true,
     incorrect: '',
+    sessions: [],
   },
 
   reducers: {
@@ -14,9 +15,12 @@ export const appSlice = createSlice({
     setIncorrect: (state, action) => {
       state.incorrect = action.payload;
     },
+    setSessions: (state, action) => {
+      state.sessions = action.payload;
+    },
   },
 });
 
-export const { setLoggedIn, setIncorrect } = appSlice.actions;
+export const { setLoggedIn, setIncorrect, setSessions } = appSlice.actions;
 
 export default appSlice.reducer;
