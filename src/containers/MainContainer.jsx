@@ -52,16 +52,16 @@ export default function main() {
         <h1>Schedule Session</h1>
         <form onSubmit={(e) => addSess(e)}>
           <label className={styles.formLabel}>Title:</label>
-          <input type='text' placeholder='required' />
+          <input className={styles.formIn} type='text' placeholder='required' />
           <br />
           <label className={styles.formLabel}>Instructor:</label>
-          <input type='text' placeholder='first name only' />
+          <input className={styles.formIn} type='text' placeholder='first name only' />
           <br />
           <label className={styles.formLabel}>Date and Time:</label>
-          <input type='datetime-local' />
+          <input className={styles.formIn} type='datetime-local' />
           <br />
           <label className={styles.formLabel}>Google Meets URL:</label>
-          <input type='text' />
+          <input className={styles.formIn} type='text' placeholder='required, include https://' />
           <br />
           <label className={styles.formLabel}>Description:</label>
           <br />
